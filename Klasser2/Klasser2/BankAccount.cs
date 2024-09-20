@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BankAccount
+namespace Klasser2
 {
-    public class BankAccount
+    internal class BankAccount
     {
+
         //Lägg till Egenskaper (fields)
         public string AccountNumber { get; set; }
         public string AccountHolder { get; set; }
@@ -15,11 +16,11 @@ namespace BankAccount
 
 
         //Lägg till Konstruktor
-        public BankAccount(string accountNumber, string accountHolder, double balance) 
+        public BankAccount(string accountNumber, string accountHolder, double balance)
         {
-            AccountNumber= accountNumber;
-            AccountHolder= accountHolder;
-            Balance= balance;
+            AccountNumber = accountNumber;
+            AccountHolder = accountHolder;
+            Balance = balance;
         }
 
         //Lägg till Metoder
@@ -29,10 +30,10 @@ namespace BankAccount
             if (amount > 0)
             {
                 Balance += amount;
-                Console.WriteLine($"Du har satt in; {amount}kr, ditt nya saldo är: {Balance}kr");
+                Console.WriteLine($"Du har satt in: {amount}kr, ditt nya saldo är: {Balance}kr");
             }
 
-            else//om användaren försöker lägga till ett negativt belopp
+            else//om användaren försöker sätta in ett negativt belopp
             {
                 Console.WriteLine("Här kan du bara sätta in pengar");
             }
@@ -52,9 +53,9 @@ namespace BankAccount
             }
         }
 
-        public double DisplayBalance()//metod för att kolla saldo
+        public void DisplayBalance()//metod för att kolla saldo
         { 
-        
+        Console.WriteLine($"Du har {Balance}kr kvar på kontot");
         }
     }
 }
