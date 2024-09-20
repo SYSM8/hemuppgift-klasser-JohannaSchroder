@@ -52,9 +52,10 @@ namespace BankAccount
             }
         }
 
-        public double DisplayBalance()//metod för att kolla saldo
-        { 
-        
+        public void DisplayBalance()//metod för att kolla saldo
+        {
+            Console.WriteLine($"Du har {Balance}kr kvar på kontot");
         }
+    
     }
 }
