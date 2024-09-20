@@ -9,12 +9,18 @@ namespace BankAccount
     public class BankAccount
     {
         //Lägg till Egenskaper (fields)
-        public string AccountNumber { get; set; }
+        public int AccountNumber { get; set; }
         public string AccountHolder { get; set; }
         public double Balance { get; set; }
 
 
         //Lägg till Konstruktor
+        public BankAccount(int accountNumber, string accountHolder, double balance) 
+        {
+            AccountNumber= accountNumber;
+            AccountHolder= accountHolder;
+            Balance= balance;
+        }
 
         //Lägg till Metoder
         public double Deposit()//metod lägga till pengar
